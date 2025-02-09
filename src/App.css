@@ -1,0 +1,62 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+}
+
+button {
+  font-size: 24px;
+  padding: 15px 40px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.accept {
+  background-color: #ff007f;
+  color: white;
+}
+
+.reject {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.accept:hover, .reject:hover {
+  transform: scale(1.2);
+}
+
+.heart {
+  font-size: 50px;
+  opacity: 0.8;
+  position: absolute;
+  animation: heartFloat 4s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+  0% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-30px); opacity: 0.8; }
+  100% { transform: translateY(0); opacity: 1; }
+}
